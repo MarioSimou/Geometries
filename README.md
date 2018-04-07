@@ -3,8 +3,11 @@ Geometries repository
 ------------------------------------------------
 
 **Geom Class**
+
 __CAUTION : Geom class cannot be instantiated__
-     Methods:
+
+__Methods:__
+
         .getStartPoint()
         # Returns the starting point of the object
         .getEndPoint()

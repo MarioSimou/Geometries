@@ -45,3 +45,38 @@ A point can be constructed:
         class_name.getEndPoint = returns the coordinates of the point. [ class_name.getStartPoint = class_name.coords =                                 class_name.getEndPoint ]
         class_name.addPoint = Point object cannot add another point
     
+
+**Line Class**
+
+A line can be constructed:
+__CAUTION: The Line class is based to the Point class for its construction. ONLY Point class objects are acceptable__
+
+>A = Line([Point1, Point2, Point3])
+>A = Line([Point1.coords, Point2.coords, Point3.coords])
+
+## Reading a specified file
+>A = Line([]).createFeatureFromFile('filename')
+         
+         Methods:
+        class.createFeatureFromFile(directory = 'filename', delim=',', header=1, type='float')
+        # Instantiates the Line object specifying the directory of the file which will be read. The file must contains
+        only X,Y and Z coordinates. If Z coordinates are not included, then, the coordinates will be populated with zeros.
+        The method is based on genfromtxt method of numpy package. 
+        class.getMBR()
+        # Returns the minimum bounding rectangle of the object. No parameters are needed
+        class.isIntersect(startPoint,endPoint,checkPoint)
+        # Determines if the vector which is developed between a startPoint and endPoint, incorporates the location
+        of checkpoint. The startPoint, endPoint and checkPoint elements they can be Point object, np.ndarrays or lists
+        of coordinates,
+        The method will threat accordingly all the parameters
+        class.getOrientationAngle(point1,point2)
+        # Determines the orientation of a point1 and point2. The orientation is calculated with an arbitrary north axes.
+        The return angle is on gradians. Therefore for conversions:
+            degrees : gradians * 180/200
+            radians : gradians * PI /200
+        The point1 and point2 elements they can be lists, Point objects or np.ndarrays.
+        class.addPoint(point)
+        # Adds a point to the object - The object must be a Point object or an np.ndArray
+        Example:
+        class.addPoint(Point(5,7).coords)
+        class.addPoint(Point(5,7))

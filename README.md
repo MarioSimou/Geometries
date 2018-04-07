@@ -27,6 +27,7 @@ Geometries repository
         
         
 **Point Class**
+
 A point can be constructed:
 
 > A = Point(5,7,1) # 5,7,1 correspond to the X,Y and Z coordinates

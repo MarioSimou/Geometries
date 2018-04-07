@@ -2,8 +2,9 @@
 Geometries repository
 ------------------------------------------------
 
-**Geom Class Methods**
-
+**Geom Class**
+         
+         Methods
         .getStartPoint()
         # Returns the starting point of the object
         .getEndPoint()
@@ -26,10 +27,12 @@ Geometries repository
         
         
 **Point Class**
-Instructions:
-   A point can be constructed:
+A point can be constructed:
+
 > A = Point(5,7,1) # 5,7,1 correspond to the X,Y and Z coordinates
+
 > A = Point(5,7) # 5,7 correspond to the X and Y coordinates. Z is treated as zero value
+
 > A = Point([5,7,1]) # a list is used to construct the object. The list MUST contains 3 elements
     
         Methods:

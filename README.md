@@ -1,9 +1,10 @@
-# Geometries
 Geometries repository
 ------------------------------------------------
 
-**Geom Class**
-         
+
+Geom Class
+----------------
+
          Methods
         # Returns the starting point of the object
         .getStartPoint()
@@ -32,7 +33,8 @@ Geometries repository
         
         
         
-**Point Class**
+Point Class
+---------------------
 
 A point can be constructed:
 
@@ -58,7 +60,8 @@ A point can be constructed:
         >class_name.addPoint = Point object cannot add another point
     
 
-**Line Class**
+Line Class
+------------------------------------------
 
 A line can be constructed:
 __CAUTION: The Line class is based to the Point class for its construction. ONLY Point class objects are acceptable__
@@ -96,3 +99,43 @@ __Reading a specified file__
         Example:
         >class.addPoint(Point(5,7).coords)
         >class.addPoint(Point(5,7))
+
+
+Polygon Class
+-----------------------
+
+**Creating a polygon class:**
+
+>A = Polygon([Point1, Point2, Point3])
+
+>A = Polygon([Point1.coords, Point2.coords, Point3.coords])
+
+**Reading a specified file**
+
+>A = Polygon([]).createFeatureFromFile('filename')
+            
+            
+           Methods:
+           # returns the coordinates of the end point of the polygon
+           >class.getEndPoint()
+           
+           # determines if a point of is within the minimum bounding rectangle of the object
+           The point it can be object of Point class or a list containing the coordinates, or an np.ndarray.
+           >class.containsMBR(point)
+           
+           Examples:
+               class.containsMBR(Point(5,3))
+               class.containsMBR(Point(5,3).coords)
+               class.containsMBR([5,3])
+            
+            # determines if a point is contained within the polygon
+            >class.contains(point)
+            
+            The point it can be object of Point class or a list containing the coordinates, or an np.ndarray.
+            Examples:
+               class.contains(Point(5,3))
+               class.contains(Point(5,3).coords)
+               class.contains([5,3])
+
+            # Plots the polygon. if you define a point, it will also be displayed`
+            >class.plotPoints(self, point = None)

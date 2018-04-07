@@ -2,11 +2,7 @@
 Geometries repository
 ------------------------------------------------
 
-**Geom Class**
-
-__CAUTION : Geom class cannot be instantiated__
-
-__Methods:__
+**Geom Class Methods**
 
         .getStartPoint()
         # Returns the starting point of the object
